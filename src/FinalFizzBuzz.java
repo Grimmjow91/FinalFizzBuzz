@@ -17,8 +17,13 @@ public class FinalFizzBuzz {
         if (nums.length != values.length){
             System.out.println("Number value mismatch. Please make sure the number checked for is the" +
                     " same length values desired.  ");
-        }
-        else{
+        } else if(!(limit > 0)){
+            System.out.println("Error: Limit has to be great than 1");
+       }else if(nums.length < 1){
+            System.out.println("Error: Must provide at least one number to look for");
+       }else if(values.length < 1){
+            System.out.println("Error: Must provide at least one value to be displayed.");
+        }else{
             for(int i = 0; i < limit; i++){
                 sb.delete(0, sb.length());
                 for(int j = 0; j<nums.length; j++){
@@ -34,6 +39,7 @@ public class FinalFizzBuzz {
         }
 
    }
+
 }
 
 
